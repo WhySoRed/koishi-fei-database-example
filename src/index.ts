@@ -142,7 +142,8 @@ export function apply(ctx: Context) {
       { id: 1, name: "张三鸡" },
       { id: 2, name: "李四狗" },
       { id: 3, name: "刘五狗" }
-    ]
+    ];
+    await ctx.database.upsert("exampleDB", data);
   })
 
 }
